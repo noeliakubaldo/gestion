@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+      // Función para convertir de hexadecimal a formato bytes (palabras)
+      function toNumbers(hexString) {
+        return CryptoJS.enc.Hex.parse(hexString);
+      }
+
+      // Función para convertir de bytes (palabras) a hexadecimal
+      function toHex(wordArray) {
+        return wordArray.toString(CryptoJS.enc.Hex);
+      }
+
+      // Clave, IV y el mensaje encriptado en hexadecimal
+      var key = toNumbers("f655ba9d09a112d4968c63579db590b4");
+      var iv = toNumbers("98344c2eee86c3994890592585b49f80");
+      var encryptedData = toNumbers("dbb761b46a19dc20a82fb8a285639359");
+
+      // Descifrado con AES usando CryptoJS
+      var decrypted = CryptoJS.AES.decrypt(
+        { ciphertext: encryptedData },
+        key,
+        { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }
+      );
+
+      // Convertir el resultado descifrado a hexadecimal y almacenarlo en una cookie
+      document.cookie = "__test=" + toHex(decrypted) + "; expires=Thu, 31-Dec-37 23:55:55 GMT; path=/";
+
+      // Redirigir al usuario
+      location.href = "http://noeliauj.infinityfreeapp.com/api.php/distrito?i=1";
+    </script>
+    <noscript>
+      This site requires Javascript to work, please enable Javascript in your browser or use a browser with Javascript support
+    </noscript>
+  </body>
+</html>
