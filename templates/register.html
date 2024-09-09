@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Clientes</title>
+    <link href="{{ url_for('static', filename='css/register.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="{{ url_for('index') }}" class="btn-primary">Ingresar nuevo registro</a>
+    </header>
+
+    <!-- Main content with table -->
+    <section class="main-content">
+        <table class="info-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>DNI</th>
+                    <th>Teléfono</th>
+                    <th>Correo Electrónico</th>
+                    <th>Distrito</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>juan.perez@example.com</td>
+                    <td>+34 612 345 678</td>
+                    <td>Calle Falsa 123, Madrid</td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>maria.lopez@example.com</td>
+                    <td>+34 676 987 654</td>
+                    <td>Avenida Principal 45, Barcelona</td>
+                </tr>
+                <!-- Añadir más filas aquí según los datos ingresados -->
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('index') }}" class="btn-back">Atrás</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Use cases</h4>
+                <a href="#">UI design</a>
+                <a href="#">UX design</a>
+                <a href="#">Wireframing</a>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="#">Design</a>
+                <a href="#">Prototyping</a>
+                <a href="#">Development features</a>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <a href="#">Blog</a>
+                <a href="#">Best practices</a>
+                <a href="#">Colors</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

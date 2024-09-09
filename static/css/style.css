@@ -1,0 +1,121 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #699F7A;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #254E41;
+    padding: 20px;
+    text-align: right;
+}
+
+header a {
+    background-color: #E1E8E6;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header a:hover {
+    background-color: #ccc;
+}
+
+/* Contenedor del formulario */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-box {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparente */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Labels y campos de entrada */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botones */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #254E41;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .footer-links {
+    display: flex;
+}
+
+footer .footer-links div {
+    margin: 0 20px;
+}
+
+footer .footer-links div a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+footer .footer-links div a:hover {
+    text-decoration: underline;
+}
